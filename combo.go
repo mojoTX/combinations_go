@@ -49,9 +49,6 @@ func main() {
 	debug(fmt.Sprintf("nb = %d", nb))
 	debug(fmt.Sprintf("denom = %d", denom))
 
-	//var ans, rem *big.Int
-	//ans, rem = ans.DivMod(nb, denom, rem)
-	//
 	ans := nb.Div(nb, denom)
 
 	fmt.Printf("For %d elements, taken %d at a time, ignoring order and without\nrepetition, you have %d possible combinations.\n", n, r, ans)
