@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math/big"
 	"os"
+	"path"
 	"strconv"
 )
 
@@ -23,6 +24,13 @@ func main() {
 	 */
 
 	blurb()
+
+	if len(os.Args) != 3 {
+		RED := "\033[31m"
+		NORMAL := "\033[0m"
+		fmt.Printf("%sUsage: %s <n> <r>%s\n", RED, path.Base(os.Args[0]), NORMAL)
+		os.Exit(1)
+	}
 
 	n, r := parse_args(os.Args[1], os.Args[2])
 
